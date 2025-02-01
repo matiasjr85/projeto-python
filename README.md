@@ -6,6 +6,13 @@ Este projeto é um chatbot baseado em múltiplos Modelos de Linguagem de Grande 
 
 O objetivo é fornecer um chatbot flexível e altamente configurável para aplicações diversas, desde assistentes virtuais até suporte automatizado.
 
+## 📌 📺 Vídeo Tutorial
+
+Para um guia detalhado sobre a instalação e uso do projeto, assista ao vídeo tutorial no YouTube:
+
+[![Tutorial do Chatbot](https://img.youtube.com/vi/mhsykWUaqmI/maxresdefault.jpg)](https://www.youtube.com/watch?v=mhsykWUaqmI)
+
+
 ## 📌 Tecnologias Utilizadas
 
 - **Linguagem:** Python
@@ -30,36 +37,15 @@ O objetivo é fornecer um chatbot flexível e altamente configurável para aplic
 ```
 📂 projeto_chatbot/
 ├── 📂 config/          # Arquivos de configuração
-│   ├── __init__.py
-│   ├── config.py
-│   ├── 📂 __pycache__/
 ├── 📂 logs/            # Diretório de logs
-│   ├── __init__.py
-│   ├── chatbot.log
-│   ├── chat_history.txt
 ├── 📂 src/             # Código-fonte principal
-│   ├── __init__.py
-│   ├── 📂 cli/
-│   │   ├── __init__.py
-│   │   ├── chatbot_cli.py
+│   ├── 📂 cli/         # Interface via terminal
 │   ├── 📂 models/      # Modelos e processamento de linguagem natural
-│   │   ├── __init__.py
-│   │   ├── chatgpt.py
-│   │   ├── roberta.py
-│   ├── 📂 strategies/
-│   │   ├── __init__.py
-│   │   ├── strategy_base.py
-│   ├── 📂 factory/
-│   │   ├── __init__.py
-│   │   ├── llm_factory.py
-│   ├── 📂 observers/
-│   │   ├── __init__.py
-│   │   ├── observer.py
-│   ├── 📂 utils/
-│   │   ├── __init__.py
-│   │   ├── logger.py
-│   ├── 📂 tests/
-│   │   ├── __init__.py
+│   ├── 📂 strategies/  # Estratégias de decisão
+│   ├── 📂 factory/     # Fábrica de LLMs
+│   ├── 📂 observers/   # Implementação do padrão Observer
+│   ├── 📂 utils/       # Utilitários e logs
+│   ├── 📂 tests/       # Testes automatizados
 ├── 📄 requirements.txt # Dependências do projeto
 ├── 🚀 run.py           # Script principal de execução
 ├── 📖 README.md        # Documentação
@@ -73,50 +59,40 @@ O objetivo é fornecer um chatbot flexível e altamente configurável para aplic
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Rodar o chatbot via CLI
+### 2️⃣ Configurar variáveis de ambiente (.env)
+
+Antes de rodar o projeto, **é necessário criar um arquivo `.env` na pasta principal do projeto** com as seguintes variáveis:
+
+```
+OPENAI_API_KEY=******
+HUGGINGFACE_API_TOKEN=******
+```
+
+Essas chaves são essenciais para autenticação nas APIs do OpenAI e Hugging Face.
+
+### 3️⃣ Rodar o chatbot via CLI
 
 ```bash
 python src/cli/chatbot_cli.py
 ```
 
-### 3️⃣ Executar testes
+### 4️⃣ Executar testes
 
 ```bash
 pytest
 ```
 
-### 4️⃣ Rodar o projeto principal
+### 5️⃣ Rodar o projeto principal
 
 ```bash
 python run.py
 ```
 
-## 📌 Arquitetura do Sistema
+## 📌 Observação Importante
 
-O projeto segue uma arquitetura modular com os seguintes componentes principais:
-
-```
-+----------------------+
-|     Usuário         |
-+----------------------+
-           |
-           v
-+----------------------+       +----------------------+
-| Interface CLI        | ----> | OpenAI / RoBERTa     |
-+----------------------+       +----------------------+
-           |
-           v
-+----------------------+
-|  Logs e Monitoramento |
-+----------------------+
-```
-
-- **Interface CLI**: Permite interagir com o chatbot via terminal.
-- **Mecanismo de Modelos**: Permite utilizar diferentes LLMs (OpenAI, RoBERTa).
-- **Comparação de Respostas**: Implementada via Strategy Pattern.
-- **Notificação Automática**: Implementada com Observer Pattern.
-- **Testes Automatizados**: Garantem a qualidade e robustez do código.
-- **Docker e Kubernetes**: Facilita a implantação escalável do chatbot.
+- O projeto **exige a configuração do arquivo `.env`** com as credenciais das APIs para funcionar corretamente.
+- Certifique-se de ter acesso às **APIs da OpenAI e Hugging Face**, pois chamadas não autenticadas resultarão em erro.
+- Se estiver enfrentando **problemas de GPU**, experimente rodar o modelo na CPU alterando as configurações no código.
 
 ## 📌 Dependências Principais
 
@@ -149,5 +125,4 @@ Caso tenha dúvidas ou sugestões, entre em contato com o time de desenvolviment
 
 ---
 
-Este README foi gerado para fornecer uma visão abrangente do projeto e facilitar sua utilização e desenvolvimento!
-
+Este README foi atualizado para incluir o **vídeo tutorial**, **informações sobre o .env**, e **observações importantes** para facilitar o uso do projeto! 🚀
