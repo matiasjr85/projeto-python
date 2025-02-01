@@ -1,0 +1,11 @@
+openai
+requests
+textstat
+fastapi
+uvicorn
+pytest
+python-dotenv
+textblob
+language_tool_python
+transformers 
+torch

@@ -1,0 +1,41 @@
+2025-01-30 03:10:40,016 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-30 03:10:50,259 - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+2025-01-30 03:11:00,385 - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+2025-01-30 03:11:41,057 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-30 03:11:51,200 - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+2025-01-30 03:12:01,331 - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+2025-01-30 03:12:31,019 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-30 03:12:41,156 - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+2025-01-30 03:12:51,280 - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+2025-01-30 03:13:09,259 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-30 03:13:19,409 - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+2025-01-30 03:13:29,640 - DEBUG - Starting new HTTPS connection (3): huggingface.co:443
+2025-01-30 03:13:56,258 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': 'quem descobriu o brasil ?'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 200, 'temperature': 0.7}}
+2025-01-30 03:13:56,276 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-01-30 03:13:56,276 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-30 03:13:56,520 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11ea038c0>
+2025-01-30 03:13:56,520 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x11ea323c0> server_hostname='api.openai.com' timeout=5.0
+2025-01-30 03:13:56,550 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11e4a7390>
+2025-01-30 03:13:56,550 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-30 03:13:56,551 - DEBUG - send_request_headers.complete
+2025-01-30 03:13:56,551 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-30 03:13:56,551 - DEBUG - send_request_body.complete
+2025-01-30 03:13:56,551 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-30 03:13:57,479 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 30 Jan 2025 06:13:57 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'portal-de-compras-publicas'), (b'openai-processing-ms', b'744'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'10000000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'9999791'), (b'x-ratelimit-reset-requests', b'6ms'), (b'x-ratelimit-reset-tokens', b'1ms'), (b'x-request-id', b'req_c5a8ec7385a8a7f617a8c008a9bfcae3'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=J_Mv7310wfIQF5zyj1oekBVvxhOyD7W_iHBz.OT75G4-1738217637-1.0.1.1-QJ39ZxsLVEAH5jfd_kydG2OJR1zJ9_PN2YliAdbWMb5ucOcAB1JudIYRVWr0UBaQH5C8nXss3.841t4CvlYI3w; path=/; expires=Thu, 30-Jan-25 06:43:57 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=2pg3cBoDQnPV55TYd_KMSRVHg7zR3rWRv3DjQZ9UdKc-1738217637490-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'909f51a4afb7f1ee-GRU'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-30 03:13:57,480 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-30 03:13:57,481 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-30 03:13:57,482 - DEBUG - receive_response_body.complete
+2025-01-30 03:13:57,482 - DEBUG - response_closed.started
+2025-01-30 03:13:57,482 - DEBUG - response_closed.complete
+2025-01-30 03:13:57,482 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 30 Jan 2025 06:13:57 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'portal-de-compras-publicas'), ('openai-processing-ms', '744'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '10000000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '9999791'), ('x-ratelimit-reset-requests', '6ms'), ('x-ratelimit-reset-tokens', '1ms'), ('x-request-id', 'req_c5a8ec7385a8a7f617a8c008a9bfcae3'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=J_Mv7310wfIQF5zyj1oekBVvxhOyD7W_iHBz.OT75G4-1738217637-1.0.1.1-QJ39ZxsLVEAH5jfd_kydG2OJR1zJ9_PN2YliAdbWMb5ucOcAB1JudIYRVWr0UBaQH5C8nXss3.841t4CvlYI3w; path=/; expires=Thu, 30-Jan-25 06:43:57 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=2pg3cBoDQnPV55TYd_KMSRVHg7zR3rWRv3DjQZ9UdKc-1738217637490-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '909f51a4afb7f1ee-GRU'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-01-30 03:13:57,482 - DEBUG - request_id: req_c5a8ec7385a8a7f617a8c008a9bfcae3
+2025-01-30 03:13:58,081 - DEBUG - Starting new HTTPS connection (1): api.duckduckgo.com:443
+2025-01-30 03:13:58,201 - DEBUG - https://api.duckduckgo.com:443 "GET /?q=quem%20descobriu%20o%20brasil%20?&format=json HTTP/1.1" 200 None
+2025-01-30 03:13:59,223 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8081
+2025-01-30 03:13:59,261 - DEBUG - http://127.0.0.1:8081 "GET /v2/languages HTTP/1.1" 200 3307
+2025-01-30 03:13:59,263 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8081
+2025-01-30 03:14:02,578 - DEBUG - http://127.0.0.1:8081 "GET /v2/check?language=en-US&text=O+Brasil+foi+%22descoberto%22+pelos+portugueses+em+1500%2C+liderados+por+Pedro+%C3%81lvares+Cabral.+No+entanto%2C+%C3%A9+importante+ressaltar+que+o+territ%C3%B3rio+j%C3%A1+era+habitado+por+povos+ind%C3%ADgenas+muito+antes+da+chegada+dos+europeus. HTTP/1.1" 200 89300
+2025-01-30 03:14:02,582 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8081
+2025-01-30 03:14:02,619 - DEBUG - http://127.0.0.1:8081 "GET /v2/check?language=en-US&text=RoBERTa HTTP/1.1" 200 1184
+2025-01-30 03:22:34,481 - DEBUG - close.started
+2025-01-30 03:22:34,484 - DEBUG - close.complete
